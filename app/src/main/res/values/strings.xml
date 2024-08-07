@@ -16,4 +16,5 @@
     <string name="other_location">Other</string>
     <string name="my_location">My</string>
     <string name="route" translatable="false">Route</string>
+    <string name="attraction">Attraction</string>
 </resources>

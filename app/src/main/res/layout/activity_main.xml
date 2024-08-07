@@ -14,64 +14,7 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <!--하단 부분 버튼들 가운데 AI 버튼만 다른 색으로 제작 예정-->
-    <Button
-        android:id="@+id/Explore"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintWidth_percent="0.2"
-        android:background="#6EDCFD"
-        android:text="@string/explore"
-        android:contentDescription="@string/explore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <Button
-        android:id="@+id/Go"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintWidth_percent="0.2"
-        android:background="#6EDCFD"
-        android:text="@string/go"
-        android:contentDescription="@string/go"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Explore"/>
-
-    <Button
-        android:id="@+id/Ai"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintWidth_percent="0.2"
-        android:background="#00BDF6"
-        android:text="@string/ai"
-        android:contentDescription="@string/ai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Go"/>
-
-    <Button
-        android:id="@+id/Saved"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintWidth_percent="0.2"
-        android:background="#6EDCFD"
-        android:text="@string/saved"
-        android:contentDescription="@string/saved"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Ai"/>
-
-    <Button
-        android:id="@+id/Updates"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintWidth_percent="0.2"
-        android:background="#6EDCFD"
-        android:text="@string/updates"
-        android:contentDescription="@string/updates"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Saved"/>
-
     <!--검색창 제작 구글 지도 같은 음성 검색 버튼 제작안 할 예정 음성 검색은 AI탭 에서-->
-
     <SearchView
         android:id="@+id/Search"
         android:layout_margin="10dp"
@@ -99,13 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-            <!--첫번쨰 버튼에는 Gemini색으로 그라데이션 입힐예정-->
             <Button
                 android:id="@+id/Cat1"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_margin="3dp"
-                android:text="@string/ai_pick"
+                android:text="@string/restaurant"
                 android:padding="5dp"
                 android:background="@drawable/button_corner_10_w"
                 />
@@ -122,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_margin="3dp"
-                android:text="@string/restaurant"
+                android:text="@string/attraction"
                 android:padding="5dp"
                 android:background="@drawable/button_corner_10_w"
                  />
@@ -180,9 +122,65 @@
         android:layout_margin="10dp"
         android:textSize="4pt"
         android:text="@string/route"
-        android:background="@drawable/button_corner_10_sb"
+        android:background="@drawable/corner_10_gradient_sb_r_line45"
         app:layout_constraintBottom_toTopOf="@id/Updates"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--하단 부분 버튼들 가운데 AI 버튼만 다른 색으로 제작 예정-->
+    <Button
+        android:id="@+id/Explore"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/button_corner_20_w_l"
+        android:text="@string/explore"
+        android:contentDescription="@string/explore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/Go"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_w_sb_line"
+        android:text="@string/go"
+        android:contentDescription="@string/go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Explore"/>
+
+    <Button
+        android:id="@+id/Ai"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_sb_r_line"
+        android:text="@string/ai"
+        android:contentDescription="@string/ai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Go"/>
+
+    <Button
+        android:id="@+id/Saved"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_r_w_line"
+        android:text="@string/saved"
+        android:contentDescription="@string/saved"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Ai"/>
+
+    <Button
+        android:id="@+id/Updates"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/button_corner_20_w_r"
+        android:text="@string/updates"
+        android:contentDescription="@string/updates"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Saved"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
