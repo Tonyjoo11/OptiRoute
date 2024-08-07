@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OptiRoute</string>
+    <string name="explore">탐색</string>
+    <string name="go">길 찾기</string>
+    <string name="saved">저장</string>
+    <string name="updates">엄데이트</string>
+    <string name="coffee">커피</string>
+    <string name="restaurant">식당</string>
+    <string name="gas">주유소</string>
+    <string name="shopping">쇼핑</string>
+    <string name="more">+ 더보기</string>
+    <string name="other_location">이동</string>
+    <string name="my_location">현위치</string>
+</resources>
