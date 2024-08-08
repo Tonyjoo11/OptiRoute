@@ -1,0 +1,187 @@
+<!--전체적인 색상은 화이트, 포인트 색상은 gemini컬러로 포인트 줄예정-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <!--검색창 제작 구글 지도 같은 음성 검색 버튼 제작안 할 예정 음성 검색은 AI탭 에서-->
+    <SearchView
+        android:id="@+id/Search"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_corner_10_g"
+        android:queryHint="Search Here"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--검색창 아래의 장소 카테고리 누르면 검색창에 올라가게끔 *구글맵 참고*-->
+
+    <HorizontalScrollView
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/Search"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/Cat1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:text="@string/restaurant"
+                android:padding="5dp"
+                android:background="@drawable/button_corner_10_w"
+                />
+            <Button
+                android:id="@+id/Cat2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:text="@string/coffee"
+                android:padding="5dp"
+                android:background="@drawable/button_corner_10_w" />
+            <Button
+                android:id="@+id/Cat3"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:text="@string/attraction"
+                android:padding="5dp"
+                android:background="@drawable/button_corner_10_w"
+                 />
+            <Button
+                android:id="@+id/Cat4"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:text="@string/gas"
+                android:padding="5dp"
+                android:background="@drawable/button_corner_10_w" />
+            <Button
+                android:id="@+id/Cat5"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:text="@string/shopping"
+                android:padding="5dp"
+                android:background="@drawable/button_corner_10_w" />
+            <Button
+                android:id="@+id/More"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:text="@string/more"
+                android:padding="5dp"
+                android:background="@drawable/button_corner_10_t" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ToggleButton
+        android:id="@+id/myLocation"
+        android:padding="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="6pt"
+        android:textOn="@string/other_location"
+        android:textOff="@string/my_location"
+        app:layout_constraintBottom_toTopOf="@id/findRoute"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_corner_100_w"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/findRoute"
+        android:padding="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:layout_margin="10dp"
+        android:textSize="4pt"
+        android:text="@string/route"
+        android:background="@drawable/corner_10_gradient_sb_r_line45"
+        app:layout_constraintBottom_toTopOf="@id/Updates"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--하단 부분 버튼들 가운데 AI 버튼만 다른 색으로 제작 예정-->
+    <Button
+        android:id="@+id/Explore"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/button_corner_20_w_l"
+        android:text="@string/explore"
+        android:contentDescription="@string/explore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/Go"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_w_sb_line"
+        android:text="@string/go"
+        android:contentDescription="@string/go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Explore"/>
+
+    <Button
+        android:id="@+id/Ai"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_sb_r_line"
+        android:text="@string/ai"
+        android:contentDescription="@string/ai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Go"/>
+
+    <Button
+        android:id="@+id/Saved"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_r_w_line"
+        android:text="@string/saved"
+        android:contentDescription="@string/saved"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Ai"/>
+
+    <Button
+        android:id="@+id/Updates"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/button_corner_20_w_r"
+        android:text="@string/updates"
+        android:contentDescription="@string/updates"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Saved"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
