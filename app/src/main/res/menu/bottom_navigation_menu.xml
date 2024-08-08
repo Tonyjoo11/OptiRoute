@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Explore_Nav"
+        android:icon="@drawable/button_corner_20_w_l"
+        android:title="@string/explore" />
+    <item
+        android:id="@+id/Go_Nav"
+        android:icon="@drawable/gradient_w_sb_line"
+        android:title="@string/go"/>
+    <item
+        android:id="@+id/Ai_Nav"
+        android:icon="@drawable/gradient_sb_r_line"
+        android:title="@string/ai"/>
+    <item
+        android:id="@+id/Saved_Nav"
+        android:icon="@drawable/gradient_r_w_line"
+        android:title="@string/saved"/>
+    <item
+        android:id="@+id/Setting_Nav"
+        android:icon="@drawable/button_corner_20_w_r"
+        android:title="@string/updates"/>
+</menu>

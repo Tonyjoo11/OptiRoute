@@ -17,4 +17,6 @@
     <string name="my_location">My</string>
     <string name="route" translatable="false">Route</string>
     <string name="attraction">Attraction</string>
+    <string name="setting">Setting</string>
+    <string name="map">Map</string>
 </resources>
