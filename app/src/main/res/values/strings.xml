@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">OptiRoute</string>
+    <!-- bottom button -->
+    <string name="explore">Explore</string>
+    <string name="go">GO</string>
+    <string name="ai" translatable="false">AI</string>
+    <string name="saved">Saved</string>
+    <string name="updates">Updates</string>
+    <!-- scroll & etc -->
+    <string name="ai_pick" translatable="false">Ai pick</string>
+    <string name="coffee">Coffee</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="gas">Gas</string>
+    <string name="shopping">Shopping</string>
+    <string name="more">+ more</string>
+    <string name="other_location">Other</string>
+    <string name="my_location">My</string>
+    <string name="route" translatable="false">Route</string>
+    <string name="attraction">Attraction</string>
 </resources>
