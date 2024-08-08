@@ -13,4 +13,6 @@
     <string name="other_location">이동</string>
     <string name="my_location">현위치</string>
     <string name="attraction">관광명소</string>
+    <string name="setting">설정</string>
+    <string name="map">지도</string>
 </resources>

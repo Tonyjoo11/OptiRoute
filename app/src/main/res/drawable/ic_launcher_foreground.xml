@@ -9,7 +9,7 @@
         android:pathData="M54, 30
                           A15,15 0 1 1 54,60
                           A15,15 0 1 1 54,30
-                          M40.63914685,51.81818181 H67.36095314 L54,78 Z">
+                          M40.63914685,51.81818181 H67.36095314 L54,78Z">
         <aapt:attr name="android:fillColor">
             <gradient
                 android:endX="108"
@@ -31,23 +31,14 @@
         android:fillColor="#FFFFFF"
         android:pathData="M47,45
                           A7,7 0 0 0 54,38
-                          L 54,45 Z"/>
-
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,38
+                          L 54,45
+                          M54,38
                           A7,7 0 0 0 61,45
-                          L 54,45 Z"/>
-
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M61,45
+                          L 54,45
+                          M61,45
                           A7,7 0 0 0 54,52
-                          L 54,45 Z"/>
-
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,52
+                          L 54,45
+                          M54,52
                           A7,7 0 0 0 47,45
                           L 54,45 Z"/>
 </vector>
