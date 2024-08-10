@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements APICallback{
 
     //API 정보 표시를 위한 TextView
     private TextView textView;
+    public String dataStr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements APICallback{
             getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         }
 
-//        textView = findViewById(R.id.text_view); //TextView 초기화
+        textView = findViewById(R.id.first); //TextView 초기화
 
 
         //API 설정 구간
@@ -45,11 +46,14 @@ public class MainActivity extends AppCompatActivity implements APICallback{
                 try {
 //                    textView.setText(data.toString(2)); // JSON 데이터를 보기 좋게 출력
                     Log.i("APITest","API Responce : " + data.toString(2));
+                    dataStr = data.toString(2);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
+
     }
     @Override
     public void onError(Throwable error) {
