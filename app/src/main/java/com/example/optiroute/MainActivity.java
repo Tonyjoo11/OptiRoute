@@ -1,9 +1,13 @@
 package com.example.optiroute;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -62,6 +66,15 @@ public class MainActivity extends AppCompatActivity implements APICallback{
             public void run() {
                 Toast.makeText(MainActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                 Log.e("APITest", "Error: " + error.getMessage());
+            }
+        });
+        ImageButton settingButton = findViewById(R.id.Setting);
+
+        settingButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestPageActivity.class);
+                startActivity(intent);
             }
         });
     }
