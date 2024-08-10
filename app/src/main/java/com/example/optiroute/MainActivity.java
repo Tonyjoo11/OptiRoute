@@ -29,10 +29,13 @@ public class MainActivity extends AppCompatActivity implements APICallback{
 
 //        textView = findViewById(R.id.text_view); //TextView 초기화
 
+
+        //API 설정 구간
         PuzzleAPITest puzzleApiTest = new PuzzleAPITest();
 //        puzzleApiTest.fetchData("2", "2207", this);
         SeoulAPITest.RealtimeStationArrival realtimeStationArrival = new SeoulAPITest().new RealtimeStationArrival();
-        realtimeStationArrival.fetchData("수원", this);
+//        realtimeStationArrival.fetchData("수원", this);
+
     }
     @Override
     public void onDataLoaded(JSONObject data) {
