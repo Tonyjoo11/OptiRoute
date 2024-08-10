@@ -9,15 +9,12 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+
 public class PuzzleAPITest {
     private String appKey = "sQ4vyaQRNV8IjE7pSqdUS7ft0TkUVymoaWAAlTSc";
-    private String url = "https://apis.openapi.sk.com/puzzle/subway/congestion/rltm/trains/";;
-    public interface ApiCallback {
-        void onDataLoaded(JSONObject data);
-        void onError(Throwable error);
-    }
+    private String url = "https://apis.openapi.sk.com/puzzle/subway/congestion/rltm/trains/";
 
-    public void fetchData(String subwayLine, String trainNumber, ApiCallback callback) {
+    public void fetchData(String subwayLine, String trainNumber, APICallback callback) {
         url += subwayLine + "/" + trainNumber;
 
         OkHttpClient client = new OkHttpClient();
