@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements PuzzleAPITest.Api
             getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         }
 
-        textView = findViewById(R.id.text_view); //TextView 초기화
+//        textView = findViewById(R.id.text_view); //TextView 초기화
 
         PuzzleAPITest apiTest = new PuzzleAPITest();
         apiTest.fetchData("2", "2207", this);
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements PuzzleAPITest.Api
             @Override
             public void run() {
                 try {
-                    textView.setText(data.toString(2)); // JSON 데이터를 보기 좋게 출력
+//                    textView.setText(data.toString(2)); // JSON 데이터를 보기 좋게 출력
                     Log.i("TAG","API Responce : " + data.toString(2));
                 } catch (Exception e) {
                     e.printStackTrace();
