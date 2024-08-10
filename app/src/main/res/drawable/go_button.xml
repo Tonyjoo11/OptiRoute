@@ -4,8 +4,31 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!--
+<path
+    android:fillColor="#1F7CFB"
+    android:pathData="M53.25,38 V60 L43.25,70 Z
+                      M54.75,38 V60 L64.75,70 Z" />
+
+<path
+    android:fillColor="#FFFFFF"
+    android:pathData="M52.745,41.1253 V59.9 L44.16378,68.5109088 Z
+                      M55.25499,41.12533288 V59.9 L63.836202,68.5109088 Z"/>
+-->
+    <path
+        android:fillColor="#1F7CFB"
+        android:pathData="M54,38
+                          L42,68
+                          L54,64
+                          L66,68
+                          Z"/>
+<!--
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M0,0h108v108h-108z" />
-
+        android:pathData="M54,40
+                          L44,68
+                          L54,64.5
+                          L64,68
+                          Z"/>
+                          -->
 </vector>
