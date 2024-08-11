@@ -1,9 +1,12 @@
 package com.example.optiroute;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.TextView;
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements APICallback{
     public static String dataStr = "NO DATA";
     String apiType = "";
 
+    private ButtonHandler buttonHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,19 +44,6 @@ public class MainActivity extends AppCompatActivity implements APICallback{
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         }
-
-        ImageButton settingButton = findViewById(R.id.Setting);
-
-        settingButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestPageActivity.class);
-                intent.putExtra("dataStr", dataStr);// JSON 데이터 넘겨주기
-                intent.putExtra("apiType", apiType);
-                startActivity(intent);
-            }
-        });
-
         //API 설정 구간
         PuzzleAPITest puzzleApiTest = new PuzzleAPITest();
 //        puzzleApiTest.fetchData("2", "2207", this);
@@ -65,13 +56,15 @@ public class MainActivity extends AppCompatActivity implements APICallback{
 
         apiType = "seoul.realtimeStationArrival";
 
-
         //지도 관련 설정
         MapsMarkerActivity mapsMarkerActivity = new MapsMarkerActivity();
         mapsMarkerActivity.initMapView(savedInstanceState);
-
     }
-    //지도 관련 메서드
+
+
+    public void onImageButtonClick(View view) {
+        buttonHandler.navigationButtonClick(view);
+    }
     public class MapsMarkerActivity implements OnMapReadyCallback {
 
         private MapView mapView;
@@ -153,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements APICallback{
             }
         });
     }
+
 
 
     @Override

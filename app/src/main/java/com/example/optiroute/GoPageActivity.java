@@ -20,7 +20,7 @@ public class GoPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.go_page);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView_go);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Sample data
