@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <!--tools:context=".GoPageActivity"-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_go"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Ai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Explore"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/button_corner_20_w_l"
+        android:text="@string/explore"
+        android:src="@drawable/explore_button"
+        android:contentDescription="@string/explore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/Go"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
+        app:layout_constraintWidth_percent="0.2"
+        android:src="@drawable/go_button"
+        android:background="@drawable/gradient_w_sb_line"
+        android:contentDescription="@string/go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Explore"/>
+
+    <ImageButton
+        android:id="@+id/Ai"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_sb_r_line"
+        android:contentDescription="@string/ai"
+        android:src="@drawable/ai_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Go"/>
+
+    <ImageButton
+        android:id="@+id/Saved"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/gradient_r_w_line"
+        android:src="@drawable/saved_button"
+        android:contentDescription="@string/saved"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Ai"/>
+
+    <ImageButton
+        android:id="@+id/Setting"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/button_corner_20_w_r"
+        android:src="@drawable/setting_button"
+        android:contentDescription="@string/setting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Saved" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

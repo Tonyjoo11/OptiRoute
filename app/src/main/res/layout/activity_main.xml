@@ -13,11 +13,12 @@
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
         android:contentDescription="@string/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-58dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <SearchView
         android:id="@+id/Search"
@@ -106,12 +107,11 @@
     <ToggleButton
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
         android:textOn=""
         android:textOff=""
         app:layout_constraintBottom_toTopOf="@id/findRoute"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/toggle_button_selector"
         android:layout_centerInParent="true"
         />
@@ -125,13 +125,14 @@
         android:src="@drawable/route_button"
         android:background="@drawable/corner_10_gradient_sb_r_line45"
         app:layout_constraintBottom_toTopOf="@id/Setting"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/route"/>
 
     <ImageButton
         android:id="@+id/Explore"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
         app:layout_constraintWidth_percent="0.2"
         android:background="@drawable/button_corner_20_w_l"
         android:text="@string/explore"
@@ -144,6 +145,7 @@
         android:id="@+id/Go"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
         app:layout_constraintWidth_percent="0.2"
         android:src="@drawable/go_button"
         android:background="@drawable/gradient_w_sb_line"
@@ -155,6 +157,7 @@
         android:id="@+id/Ai"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
         app:layout_constraintWidth_percent="0.2"
         android:background="@drawable/gradient_sb_r_line"
         android:contentDescription="@string/ai"
@@ -166,6 +169,7 @@
         android:id="@+id/Saved"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
         app:layout_constraintWidth_percent="0.2"
         android:background="@drawable/gradient_r_w_line"
         android:src="@drawable/saved_button"
@@ -177,6 +181,7 @@
         android:id="@+id/Setting"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:onClick="onImageButtonClick"
         app:layout_constraintWidth_percent="0.2"
         android:background="@drawable/button_corner_20_w_r"
         android:src="@drawable/setting_button"
