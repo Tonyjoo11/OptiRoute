@@ -14,6 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ButtonHandler buttonHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +25,10 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         }
-        ImageButton settingButton = findViewById(R.id.Setting);
 
-        settingButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TestPageActivity.class);
-                startActivity(intent);
-            }
-        });
+    }
+
+    public void onImageButtonClick(View view) {
+        buttonHandler.navigationButtonClick(view);
     }
 }
