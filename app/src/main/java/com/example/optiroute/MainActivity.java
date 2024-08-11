@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements APICallback{
         mapsMarkerActivity.initMapView(savedInstanceState);
 
     }
-
+    //지도 관련 메서드
     public class MapsMarkerActivity implements OnMapReadyCallback {
 
         private MapView mapView;
@@ -99,8 +99,10 @@ public class MainActivity extends AppCompatActivity implements APICallback{
 
         @Override
         public void onMapReady(GoogleMap googleMap) {
+            googleMap.getUiSettings().setZoomControlsEnabled(true);
+
             LatLng seoul = new LatLng(37.5664056, 126.9778222);
-            googleMap.addMarker(new MarkerOptions().position(seoul).title("Marker in Sydney"));
+            googleMap.addMarker(new MarkerOptions().position(seoul).title("Marker in Seoul"));
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(seoul));
         }
 
