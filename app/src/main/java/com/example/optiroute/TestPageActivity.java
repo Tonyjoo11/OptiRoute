@@ -17,7 +17,7 @@ import org.json.XML;
 
 import java.util.HashMap;
 
-public class TestPageActivity extends AppCompatActivity implements APICallback{
+public class TestPageActivity extends AppCompatActivity{
 
     JSONObject jsonData;
     @Override
@@ -26,11 +26,11 @@ public class TestPageActivity extends AppCompatActivity implements APICallback{
         setContentView(R.layout.test_page);
 
         //MainActivity에서 참조해온 데이터 표시
-        Intent intent = getIntent();
-        String dataStr = intent.getStringExtra("dataStr");
-        String apiType = intent.getStringExtra("apiType");
-        TextView firstTextView = findViewById(R.id.first);
-        parseJSON(dataStr, apiType);
+//        Intent intent = getIntent();
+//        String dataStr = intent.getStringExtra("dataStr");
+//        String apiType = intent.getStringExtra("apiType");
+//        TextView firstTextView = findViewById(R.id.first);
+//        parseJSON(dataStr, apiType);
 
         //버튼 추가
 //        ImageButton settingButton = findViewById(R.id.Setting);
@@ -48,67 +48,42 @@ public class TestPageActivity extends AppCompatActivity implements APICallback{
     }
 
     //JSON 파싱 코드
-    HashMap<String, String> parseJSON(String jsonString, String apiType) {
-        HashMap<String, String> resHashMap = new HashMap<>();
-        try {
-            jsonData = new JSONObject(jsonString);
-            switch (apiType){
-                case "":
-                    Log.e(this + "::JSON Parsing", "NO JSON DATA");
-                case "seoul.realtimeStationArrival":
-                    JSONObject result = jsonData.getJSONObject("RESULT");
+//    public void parseJSON(String jsonString, String apiType) {
+//        HashMap<String, String> resHashMap = new HashMap<>();
+//        try {
+//            jsonData = new JSONObject(jsonString);
+//            switch (apiType){
+//                case "":
+//                    Log.e(this + "::JSON Parsing", "NO JSON DATA");
+//                case "seoul.realtimeStationArrival":
+//                    JSONObject result = jsonData.getJSONObject("RESULT");
+//
+//                    String code = result.getString("CODE");
+//                    resHashMap.put("CODE", code);
+//
+//                    String message = result.getString("MESSAGE");
+//                    resHashMap.put("MESSAGE", message);
+//
+//                    if (code.contains("ERROR")){
+//                        Log.e("TestPageActivity::JSON Parsing", code + "\nMESSAGE : " + message);
+//                        Toast.makeText(this, code, Toast.LENGTH_SHORT).show();
+//                        break;
+//                    }
+//                    else{
+//                        if(code.equals("INFO-200")){
+//                            Log.w("TestPageActivity::JSON Parsing", "Data Not Found");
+//                            Toast.makeText(this, "Data Not Found", Toast.LENGTH_SHORT).show();
+//                            break;
+//                        }
+//                        //TODO : 정상 처리 되었을 시 데이터 마저 파싱
+//                    }
+//            }
+//        } catch (JSONException e){
+//            e.printStackTrace();
+//            Log.e("TestPageActivity::JSON Parsing","Error" + e);
+//        }
+//    }
 
-                    String code = result.getString("CODE");
-                    resHashMap.put("CODE", code);
 
-                    String message = result.getString("MESSAGE");
-                    resHashMap.put("MESSAGE", message);
-
-                    if (code.contains("ERROR")){
-                        Log.e("TestPageActivity::JSON Parsing", code + "\nMESSAGE : " + message);
-                        Toast.makeText(this, code, Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    else{
-                        if(code.equals("INFO-200")){
-                            Log.w("TestPageActivity::JSON Parsing", "Data Not Found");
-                            Toast.makeText(this, "Data Not Found", Toast.LENGTH_SHORT).show();
-                            break;
-                        }
-                        //TODO : 정상 처리 되었을 시 데이터 마저 파싱
-                    }
-            }
-        } catch (JSONException e){
-            e.printStackTrace();
-            Log.e("TestPageActivity::JSON Parsing","Error" + e);
-        }
-        return resHashMap;
-    }
-
-    @Override
-    public void onDataLoaded(JSONObject data) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-//                    textView.setText(data.toString(2)); // JSON 데이터를 보기 좋게 출력
-                    Log.i("APITest","API Responce : " + data.toString(2));
-                    jsonData = data;
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-    @Override
-    public void onError(Throwable error) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(TestPageActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("APITest", "Error: " + error.getMessage());
-            }
-        });
-    }
 }
 
