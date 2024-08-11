@@ -59,11 +59,19 @@ public class MainActivity extends AppCompatActivity implements APICallback{
         //지도 관련 설정
         MapsMarkerActivity mapsMarkerActivity = new MapsMarkerActivity();
         mapsMarkerActivity.initMapView(savedInstanceState);
+
+        //ButtonHandler 초기화
+        buttonHandler = new ButtonHandler(this);
     }
 
 
     public void onImageButtonClick(View view) {
-        buttonHandler.navigationButtonClick(view);
+        if(buttonHandler != null){
+            buttonHandler.navigationButtonClick(view);
+        } else {
+            Log.e("MainActivity", "ButtonHandler is null!");
+        }
+
     }
     public class MapsMarkerActivity implements OnMapReadyCallback {
 
