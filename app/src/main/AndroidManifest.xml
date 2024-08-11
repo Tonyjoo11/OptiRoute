@@ -22,7 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".ExploreActivity" />
+        <activity android:name=".GoActivity" />
+        <activity android:name=".AiActivity" />
+        <activity android:name=".SavedActivity" />
+        <activity android:name=".SettingActivity" />
     </application>
 
 </manifest>
