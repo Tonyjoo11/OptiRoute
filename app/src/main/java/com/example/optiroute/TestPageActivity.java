@@ -4,6 +4,8 @@ package com.example.optiroute;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -17,34 +19,18 @@ import org.json.XML;
 
 import java.util.HashMap;
 
-public class TestPageActivity extends AppCompatActivity{
+public class TestPageActivity extends AppCompatActivity {
+
+    private ButtonHandler buttonHandler;
 
     JSONObject jsonData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_page);
-
-        //MainActivity에서 참조해온 데이터 표시
-//        Intent intent = getIntent();
-//        String dataStr = intent.getStringExtra("dataStr");
-//        String apiType = intent.getStringExtra("apiType");
-//        TextView firstTextView = findViewById(R.id.first);
-//        parseJSON(dataStr, apiType);
-
-        //버튼 추가
-//        ImageButton settingButton = findViewById(R.id.Setting);
-//
-//        settingButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, TestPageActivity.class);
-//                intent.putExtra("dataStr", dataStr);// JSON 데이터 넘겨주기
-//                intent.putExtra("apiType", apiType);
-//                startActivity(intent);
-//            }
-//        });
-
+    }
+    public void onImageButtonClick(View view) {
+        buttonHandler.navigationButtonClick(view);
     }
 
     //JSON 파싱 코드
