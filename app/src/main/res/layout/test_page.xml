@@ -28,23 +28,24 @@
         app:layout_constraintStart_toEndOf="@id/first"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/image_first"
+    <Button
+        android:id="@+id/loadSeoulAPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/first"
-        android:src="@drawable/my_location_toggle"
-        android:layout_margin="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="36dp"
+        android:text="load Seoul API"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <Button
+        android:id="@+id/loadPuzzleAPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/image_first"
-        android:src="@drawable/saved_button"
-        android:layout_margin="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="36dp"
+        android:text="load puzzle API"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
